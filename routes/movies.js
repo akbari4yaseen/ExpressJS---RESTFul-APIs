@@ -67,6 +67,26 @@ router.delete("/:id", (req, res) => {
   res.json(movie);
 });
 
+// get movie by year
+router.get("/year/:year", (req, res) => {
+  const movie = movies.find((m) => m.year === parseInt(req.params.year));
+  if (!movie) {
+    res.status(404).send("The movie with the given year was not found.");
+    return;
+  }
+  res.json(movie);
+});
+
+// get movie by title (contains)
+router.get("/title/:title", (req, res) => {
+  const movie = movies.find((m) => m.title.includes(req.params.title));
+  if (!movie) {
+    res.status(404).send("The movie with the given title was not found.");
+    return;
+  }
+  res.json(movie);
+});
+
 function validateMovie(movie) {
   const currentYear = new Date().getFullYear();
 

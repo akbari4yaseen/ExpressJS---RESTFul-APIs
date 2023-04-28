@@ -187,4 +187,48 @@ DELETE localhost:3000/movies/:id
 }
 ```
 
+## Get by Title
+
+```bash
+GET localhost:3000/movies/:title
+```
+
+### Request Params
+
+|title|
+
+### Response
+
+```json
+[
+  {
+    "id": 1,
+    "title": "The Shawshank Redemption",
+    "year": 1994
+  }
+]
+```
+
+## Get by Year
+
+```bash
+GET localhost:3000/movies/:year
+```
+
+### Request Params
+
+|year|
+
+### Response
+
+```json
+[
+  {
+    "id": 10,
+    "title": "The Lord of the Rings: The Two Towers",
+    "year": 2002
+  }
+]
+```
+
 **If you like this repo, please don't forget to give a ⭐.**
