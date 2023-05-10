@@ -75,8 +75,8 @@ async function updateMovie(id, data) {
       {
         title: data.title,
         year: data.year,
-      }
-      // { new: true }
+      },
+      { new: true }
     );
 
     // return the updated movie
