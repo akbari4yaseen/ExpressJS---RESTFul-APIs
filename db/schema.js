@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const currentYear = new Date().getFullYear();
 
 // Model
-const Movie = new mongoose.model(
+const Movie = mongoose.model(
   "Movie",
   new mongoose.Schema({
     title: { type: String, required: true, minlength: 3, maxlength: 128 },
