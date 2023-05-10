@@ -33,7 +33,7 @@ npm test
 ## List Movies
 
 ```bash
-GET localhost:3000/movies
+GET localhost:3000/api/movies
 ```
 
 ### Response
@@ -96,7 +96,7 @@ GET localhost:3000/movies
 ## Get Movie
 
 ```bash
-GET localhost:3000/movies/:id
+GET localhost:3000/api/movies/:id
 ```
 
 ### Request Params
@@ -116,7 +116,7 @@ GET localhost:3000/movies/:id
 ## Create Movie
 
 ```bash
-POST localhost:3000/movies
+POST localhost:3000/api/movies
 ```
 
 ### Request Body
@@ -141,7 +141,7 @@ POST localhost:3000/movies
 ## Update Movie
 
 ```bash
-PUT localhost:3000/movies/:id
+PUT localhost:3000/api/movies/:id
 ```
 
 ### Request Params
@@ -170,7 +170,7 @@ PUT localhost:3000/movies/:id
 ## Delete Movie
 
 ```bash
-DELETE localhost:3000/movies/:id
+DELETE localhost:3000/api/movies/:id
 ```
 
 ### Request Params
@@ -190,7 +190,7 @@ DELETE localhost:3000/movies/:id
 ## Get by Title
 
 ```bash
-GET localhost:3000/movies/:title
+GET localhost:3000/api/movies/:title
 ```
 
 ### Request Params
@@ -212,7 +212,7 @@ GET localhost:3000/movies/:title
 ## Get by Year
 
 ```bash
-GET localhost:3000/movies/:year
+GET localhost:3000/api/movies/:year
 ```
 
 ### Request Params
