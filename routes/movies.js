@@ -117,7 +117,7 @@ router.delete("/:id", (req, res) => {
         res.status(404).send("The movie with the given ID was not found.");
         return;
       }
-      res.json(result.movie);
+      res.json(result);
     })
     .catch((er) => {
       res.status(500).send("Something failed. " + er.reason);

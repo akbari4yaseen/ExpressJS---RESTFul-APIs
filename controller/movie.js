@@ -89,7 +89,7 @@ async function updateMovie(id, data) {
 // delete movie
 async function deleteMovie(id) {
   try {
-    Movie.findByIdAndRemove(id);
+    await Movie.findByIdAndRemove(id);
     return "Movie deleted";
   } catch (ex) {
     return { error: ex };
