@@ -1,4 +1,4 @@
-const Movie = require("../db/schema");
+const Movie = require("../models/movie");
 const validateMovie = require("../middleware/validation");
 
 // list all movies
