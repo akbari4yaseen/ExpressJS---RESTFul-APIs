@@ -4,7 +4,7 @@ const validateMovie = require("../middleware/validation");
 // list all movies
 async function listMovies() {
   try {
-    const movies = await Movie.find();
+    const movies = await Movie.find().sort({ year: -1 });
     return { movies };
   } catch (ex) {
     return { error: ex };
@@ -24,7 +24,7 @@ async function getMovie(id) {
 // get movies by year
 async function getMoviesByYear(year) {
   try {
-    const movies = await Movie.find({ year: year });
+    const movies = await Movie.find({ year: year }).sort({ year: -1 });
     return { movies };
   } catch (ex) {
     return { error: ex };
@@ -36,7 +36,7 @@ async function getMoviesByTitle(title) {
   try {
     const movies = await Movie.find({
       title: { $regex: title, $options: "i" },
-    });
+    }).sort({ year: -1 });
     return { movies };
   } catch (ex) {
     return { error: ex };
